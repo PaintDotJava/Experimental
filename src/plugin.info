@@ -1,0 +1,11 @@
+main : heroesgrave.paint.experimental.ExperimentalPlugin
+
+name : Experimental
+authors : Paint.JAVA Developers
+
+version : 0.15-Dev
+updated : 10-11-2014
+
+min-paint-version : 0.15-Dev
+
+description : Official plugin containing experimental editor functions for Paint.JAVA
