@@ -20,7 +20,7 @@
 
 package heroesgrave.paint.experimental.exporters;
 
-import heroesgrave.paint.gui.SimpleModalProgressDialog;
+import heroesgrave.paint.gui.ProgressDialog;
 import heroesgrave.paint.image.Document;
 import heroesgrave.paint.image.Layer;
 import heroesgrave.paint.image.RawImage;
@@ -62,7 +62,7 @@ public class ExporterPDJ extends ImageExporter
 		writeMetadata(out, doc.getMetadata());
 		
 		int c = doc.getWidth() * doc.getHeight() * doc.getFlatMap().size();
-		SimpleModalProgressDialog dialog = new SimpleModalProgressDialog("Saving...", "Saving Image...", c + 1);
+		ProgressDialog dialog = new ProgressDialog("Saving...", "Saving Image...", c + 1);
 		
 		writeLayer(out, doc.getRoot(), dialog);
 		out.flush();
@@ -74,7 +74,7 @@ public class ExporterPDJ extends ImageExporter
 		dialog.close();
 	}
 	
-	public void writeLayer(DataOutputStream out, Layer layer, SimpleModalProgressDialog dialog) throws IOException
+	public void writeLayer(DataOutputStream out, Layer layer, ProgressDialog dialog) throws IOException
 	{
 		writeMetadata(out, layer.getMetadata());
 		

@@ -20,7 +20,7 @@
 
 package heroesgrave.paint.experimental.importers;
 
-import heroesgrave.paint.gui.SimpleModalProgressDialog;
+import heroesgrave.paint.gui.ProgressDialog;
 import heroesgrave.paint.image.Document;
 import heroesgrave.paint.image.Layer;
 import heroesgrave.paint.image.RawImage;
@@ -49,7 +49,7 @@ public class ImporterBIN extends ImageImporter
 		int surfaceArea = width * height;
 		int[] raw = new int[surfaceArea];
 		
-		SimpleModalProgressDialog DIALOG = new SimpleModalProgressDialog("Working!", "Loading Image...", surfaceArea);
+		ProgressDialog DIALOG = new ProgressDialog("Working!", "Loading Image...", surfaceArea);
 		
 		for(int I = 0; I < surfaceArea; I++)
 		{

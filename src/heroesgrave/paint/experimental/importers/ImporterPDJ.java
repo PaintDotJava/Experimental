@@ -20,7 +20,7 @@
 
 package heroesgrave.paint.experimental.importers;
 
-import heroesgrave.paint.gui.SimpleModalProgressDialog;
+import heroesgrave.paint.gui.ProgressDialog;
 import heroesgrave.paint.image.Document;
 import heroesgrave.paint.image.Layer;
 import heroesgrave.paint.image.RawImage;
@@ -51,14 +51,14 @@ public class ImporterPDJ extends ImageImporter
 		doc.setMetadata(readMetadata(in));
 		
 		int c = doc.getWidth() * doc.getHeight() * layerCount;
-		SimpleModalProgressDialog dialog = new SimpleModalProgressDialog("Loading...", "Loading Image...", c + 2);
+		ProgressDialog dialog = new ProgressDialog("Loading...", "Loading Image...", c + 2);
 		
 		doc.setRoot(readLayer(in, doc, dialog));
 		
 		dialog.close();
 	}
 	
-	private Layer readLayer(DataInputStream in, Document doc, SimpleModalProgressDialog dialog) throws IOException
+	private Layer readLayer(DataInputStream in, Document doc, ProgressDialog dialog) throws IOException
 	{
 		Metadata info = readMetadata(in);
 		int[] buffer = new int[doc.getWidth() * doc.getHeight()];

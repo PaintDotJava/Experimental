@@ -20,7 +20,7 @@
 
 package heroesgrave.paint.experimental.importers;
 
-import heroesgrave.paint.gui.SimpleModalProgressDialog;
+import heroesgrave.paint.gui.ProgressDialog;
 import heroesgrave.paint.image.Document;
 import heroesgrave.paint.image.Layer;
 import heroesgrave.paint.image.RawImage;
@@ -51,7 +51,7 @@ public class ImporterZipBIN extends ImageImporter
 		int zipLen = in.readInt();
 		int[] raw = new int[surfaceArea];
 		byte[] zipd = new byte[zipLen];
-		SimpleModalProgressDialog DIALOG = new SimpleModalProgressDialog("Working!", "Loading Image...", surfaceArea);
+		ProgressDialog DIALOG = new ProgressDialog("Working!", "Loading Image...", surfaceArea);
 		DIALOG.setMessage("Reading compressed Image-bytes...");
 		in.readFully(zipd);
 		

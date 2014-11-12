@@ -20,7 +20,7 @@
 
 package heroesgrave.paint.experimental.exporters;
 
-import heroesgrave.paint.gui.SimpleModalProgressDialog;
+import heroesgrave.paint.gui.ProgressDialog;
 import heroesgrave.paint.image.Document;
 import heroesgrave.paint.io.ImageExporter;
 
@@ -66,7 +66,7 @@ public class ExporterBIN extends ImageExporter
 		
 		image.getRGB(0, 0, image.getWidth(), image.getHeight(), buf, 0, image.getWidth());
 		
-		SimpleModalProgressDialog DIALOG = new SimpleModalProgressDialog("Saving...", "Saving Image...", buf.length + 1);
+		ProgressDialog DIALOG = new ProgressDialog("Saving...", "Saving Image...", buf.length + 1);
 		
 		// Go through ALL the pixels and convert from INT_ARGB to INT_RGBA
 		
