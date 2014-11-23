@@ -37,7 +37,7 @@ import java.util.zip.GZIPInputStream;
 public class ImporterPDJ extends ImageImporter
 {
 	@Override
-	public void read(File file, Document doc) throws IOException
+	public void load(File file, Document doc) throws IOException
 	{
 		GZIPInputStream zip = new GZIPInputStream(new BufferedInputStream(new FileInputStream(file)));
 		DataInputStream in = new DataInputStream(zip);
@@ -96,7 +96,7 @@ public class ImporterPDJ extends ImageImporter
 	}
 	
 	@Override
-	public String getFormat()
+	public String getFileExtension()
 	{
 		return "pdj";
 	}

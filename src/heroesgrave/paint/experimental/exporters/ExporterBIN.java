@@ -50,7 +50,7 @@ public class ExporterBIN extends ImageExporter
 	}
 	
 	@Override
-	public void export(Document doc, File destination) throws IOException
+	public void save(Document doc, File destination) throws IOException
 	{
 		BufferedImage image = doc.getRenderedImage();
 		
@@ -109,7 +109,7 @@ public class ExporterBIN extends ImageExporter
 	}
 	
 	@Override
-	public String getFileExtensionDescription()
+	public String getDescription()
 	{
 		return "BIN - Raw Binary Image Data Format";
 	}

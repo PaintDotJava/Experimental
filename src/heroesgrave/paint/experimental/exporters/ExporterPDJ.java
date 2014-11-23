@@ -44,13 +44,13 @@ public class ExporterPDJ extends ImageExporter
 	}
 	
 	@Override
-	public String getFileExtensionDescription()
+	public String getDescription()
 	{
 		return "PDJ - Paint.JAVA experimental file format (supports layers)";
 	}
 	
 	@Override
-	public void export(Document doc, File destination) throws IOException
+	public void save(Document doc, File destination) throws IOException
 	{
 		GZIPOutputStream zip = new GZIPOutputStream(new BufferedOutputStream(new FileOutputStream(destination)));
 		DataOutputStream out = new DataOutputStream(zip);

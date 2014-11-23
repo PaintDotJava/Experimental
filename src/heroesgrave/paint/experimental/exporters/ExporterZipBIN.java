@@ -52,7 +52,7 @@ public class ExporterZipBIN extends ImageExporter
 	}
 	
 	@Override
-	public void export(Document doc, File destination) throws IOException
+	public void save(Document doc, File destination) throws IOException
 	{
 		BufferedImage image = doc.getRenderedImage();
 		
@@ -119,7 +119,7 @@ public class ExporterZipBIN extends ImageExporter
 	}
 	
 	@Override
-	public String getFileExtensionDescription()
+	public String getDescription()
 	{
 		return "ZBIN - Raw Compressed Binary Image Data Format";
 	}

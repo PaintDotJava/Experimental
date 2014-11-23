@@ -37,11 +37,9 @@ import java.io.IOException;
  **/
 public class ImporterBIN extends ImageImporter
 {
-	
 	@Override
-	public void read(File file, Document doc) throws IOException
+	public void load(File file, Document doc) throws IOException
 	{
-		
 		DataInputStream in = new DataInputStream(new FileInputStream(file));
 		
 		int width = in.readInt();
@@ -96,7 +94,7 @@ public class ImporterBIN extends ImageImporter
 	}
 	
 	@Override
-	public String getFormat()
+	public String getFileExtension()
 	{
 		return "bin";
 	}
