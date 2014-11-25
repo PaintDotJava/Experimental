@@ -1,10 +1,10 @@
 // {LICENSE}
 /*
- * Copyright 2013-2014 HeroesGrave and other Paint.JAVA developers.
+ * Copyright 2013-2014 HeroesGrave and other Spade developers.
  * 
- * This file is part of Paint.JAVA
+ * This file is part of Spade
  * 
- * Paint.JAVA is free software: you can redistribute it and/or modify
+ * Spade is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -18,13 +18,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package heroesgrave.paint.experimental.importers;
+package heroesgrave.spade.experimental.importers;
 
-import heroesgrave.paint.gui.ProgressDialog;
-import heroesgrave.paint.image.Document;
-import heroesgrave.paint.image.Layer;
-import heroesgrave.paint.image.RawImage;
-import heroesgrave.paint.io.ImageImporter;
+import heroesgrave.spade.gui.ProgressDialog;
+import heroesgrave.spade.image.Document;
+import heroesgrave.spade.image.Layer;
+import heroesgrave.spade.image.RawImage;
+import heroesgrave.spade.io.ImageImporter;
 import heroesgrave.utils.misc.Metadata;
 
 import java.io.DataInputStream;
