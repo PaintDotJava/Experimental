@@ -11,7 +11,7 @@ There are two options:
 
 1. If you are also developing the base framework, or are developing the plugin for an
 unreleased version, follow the instructions
-[here](https://github.com/Spade-EditorSpade#developing) to get Spade setup
+[here](https://github.com/Spade-Editor/Spade#developing) to get Spade setup
 in your IDE.
 
 2. If you are just interested in developing this plugin, and for the current release of
