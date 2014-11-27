@@ -20,7 +20,7 @@
 
 package heroesgrave.spade.experimental.importers;
 
-import heroesgrave.spade.gui.ProgressDialog;
+import heroesgrave.spade.gui.dialogs.ProgressDialog;
 import heroesgrave.spade.image.Document;
 import heroesgrave.spade.image.Layer;
 import heroesgrave.spade.image.RawImage;
@@ -40,7 +40,7 @@ import java.util.zip.GZIPInputStream;
 public class ImporterZipBIN extends ImageImporter
 {
 	@Override
-	public void load(File file, Document doc) throws IOException
+	public boolean load(File file, Document doc) throws IOException
 	{
 		DataInputStream in = new DataInputStream(new FileInputStream(file));
 		
@@ -93,6 +93,7 @@ public class ImporterZipBIN extends ImageImporter
 		
 		doc.setDimensions(width, height);
 		doc.setRoot(new Layer(doc, image, new Metadata()));
+		return true;
 	}
 	
 	@Override
